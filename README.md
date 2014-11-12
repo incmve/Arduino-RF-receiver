@@ -1,5 +1,10 @@
 Arduino-RF-status-LED
 =====================
 
-This is a simple Arduino sketch to receive an kaku RF signal and glow an LED to show you the status.
-This way when you send a on command the arduino also picks it up and lets a led fade in and out and glow.
+Here are some simple Arduino sketches to receive a kaku RF signal and perform some functions.
+
+* arduin-rf-relay.ino switch on/off a relay, active low. If you need it to be active High remove <code>digitalWrite(RELAY1, HIGH);</code>
+
+* receive-fadein-fadeout.ino when receiving a on signal it will fade a led in/out and glow at the end, I use this to give visual feedback when a device is switched on.
+
+* 
