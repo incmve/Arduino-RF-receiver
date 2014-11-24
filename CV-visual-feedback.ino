@@ -54,7 +54,7 @@ void showCode(NewRemoteCode receivedCode) {
   } 
 
   // fade out from max to min in increments of 5 points:
-  for(int fadeValue = 255 ; fadeValue >= 0; fadeValue -=2) { 
+  for(int fadeValue = 255 ; fadeValue >= 10; fadeValue -=1) { 
     // sets the value (range from 0 to 255):
     analogWrite(ledPinR, fadeValue);         
     // wait for 30 milliseconds to see the dimming effect    
@@ -77,7 +77,7 @@ void showCode(NewRemoteCode receivedCode) {
   } 
 
   // fade out from max to min in increments of 5 points:
-  for(int fadeValue = 255 ; fadeValue >= 0; fadeValue -=2) { 
+  for(int fadeValue = 255 ; fadeValue >= 10; fadeValue -=1) { 
     // sets the value (range from 0 to 255):
     analogWrite(ledPinB, fadeValue);         
     // wait for 30 milliseconds to see the dimming effect    
@@ -91,6 +91,7 @@ void showCode(NewRemoteCode receivedCode) {
   Serial.print(receivedCode.period); //
   Serial.println("us."); //
 }
+
 
 
 
