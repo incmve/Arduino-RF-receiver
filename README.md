@@ -11,3 +11,9 @@ Unit 66 ID 7 on = blink red
 Unit 66 ID 7 off = blink red/blue
 Unit 66 ID 8 on = burn pink
 unit 66 ID 8 off = burn orange
+```
+
+```
+Verwarming-LED-fade-blink-Dimmer.ino
+Unit 66 ID 6 dimlevel 1 to xx
+```
