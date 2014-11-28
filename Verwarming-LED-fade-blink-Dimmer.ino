@@ -42,7 +42,7 @@ void egg(NewRemoteCode receivedCode) {
   // Note: interrupts are disabled. You can re-enable them if needed.
   
  
-    if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 2 && receivedCode.dimLevel == 1) // Unit 66 ID 6 dim level 1
+    if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 2 && receivedCode.dimLevel == 1) // Unit 66 ID 6 dim level 1 RED
 	{  
 	analogWrite(ledPinR, 0); 
 	analogWrite(ledPinG, 0);
@@ -68,7 +68,7 @@ void egg(NewRemoteCode receivedCode) {
 			}
 		}  
 	}
-  if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 2 && receivedCode.dimLevel == 2) // Unit 66 ID 6 dim level 2
+  if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 2 && receivedCode.dimLevel == 2) // Unit 66 ID 6 dim level 2 BLUE
 	{
 	analogWrite(ledPinR, 0); 
 	analogWrite(ledPinG, 0);
@@ -94,7 +94,7 @@ void egg(NewRemoteCode receivedCode) {
 			}
 		}  
 	}
-    if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 2 && receivedCode.dimLevel == 3) // Unit 66 ID 6 dim level 3
+    if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 2 && receivedCode.dimLevel == 3) // Unit 66 ID 6 dim level 3 Blink RED
     {
 	analogWrite(ledPinR, 0); 
 	analogWrite(ledPinG, 0);
@@ -104,7 +104,7 @@ void egg(NewRemoteCode receivedCode) {
 	delay(50);
 		}
 	}
-    if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 2 && receivedCode.dimLevel == 4) // Unit 66 ID 6 dim level 4
+    if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 2 && receivedCode.dimLevel == 4) // Unit 66 ID 6 dim level 4 Blink RED/BLUE
     {
 	analogWrite(ledPinR, 0); 
 	analogWrite(ledPinG, 0);
@@ -114,7 +114,7 @@ void egg(NewRemoteCode receivedCode) {
 	delay(50);
 		}
 	}
-    if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 2 && receivedCode.dimLevel == 5) // Unit 66 ID 6 dim level 5
+    if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 2 && receivedCode.dimLevel == 5) // Unit 66 ID 6 dim level 5 Glow PINK
 	{
   	analogWrite(ledPinR, 0); 
 	analogWrite(ledPinG, 0);
@@ -124,7 +124,7 @@ void egg(NewRemoteCode receivedCode) {
 	analogWrite(ledPinG, 51);
 	analogWrite(ledPinB, 153); 
 	}
-    if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 2 && receivedCode.dimLevel == 6) // Unit 66 ID 6 dim level 6
+    if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 2 && receivedCode.dimLevel == 6) // Unit 66 ID 6 dim level 6 Glow GREEN
 	{
   	analogWrite(ledPinR, 0); 
 	analogWrite(ledPinG, 0);
