@@ -6,11 +6,12 @@ This way when you send a on command the arduino also picks it up and lets a led 
 
 ```
 Verwarming-LED-fade-blink.ino
-Unit 66 ID 6 on/off = fade red
+Unit 66 ID 6 on = fade red
+Unit 66 ID 6 off = fade blue
 Unit 66 ID 7 on = blink red
 Unit 66 ID 7 off = blink red/blue
 Unit 66 ID 8 on = burn pink
-unit 66 ID 8 off = burn orange
+unit 66 ID 8 off = burn green
 ```
 
 ```
