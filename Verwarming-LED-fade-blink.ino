@@ -3,9 +3,9 @@
 * https://github.com/incmve/Arduino-RF-receiver
 *
 *
-* switchtype 0 = on
-* switchtype 1 = off
-* switchtype 2 = dim
+* switchtype 0 = off
+* switchtype 1 = on
+* switchtype 3 = dim
 * For details, see NewRemoteReceiver.h!
 *
 * This sketch receives a KAKU signal and fades an RGB LED.
@@ -34,7 +34,7 @@ void setup() {
 
 void loop() 
 {
-  
+
 }
 
 // Callback function is called only when a valid code is received.
@@ -42,7 +42,7 @@ void egg(NewRemoteCode receivedCode) {
   // Note: interrupts are disabled. You can re-enable them if needed.
   
  
-    if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 1) // Unit 66 ID 6 Off signal
+    if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 1) // Unit 66 ID 6 On signal
 	{  
 	analogWrite(ledPinR, 0); 
 	analogWrite(ledPinG, 0);
@@ -68,7 +68,7 @@ void egg(NewRemoteCode receivedCode) {
 			}
 		}  
 	}
-  if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 0) // Unit 66 ID 6 On signal
+  if (receivedCode.address == 66 && receivedCode.unit == 6 && receivedCode.switchType == 0) // Unit 66 ID 6 Off signal
 	{
 	analogWrite(ledPinR, 0); 
 	analogWrite(ledPinG, 0);
@@ -94,7 +94,7 @@ void egg(NewRemoteCode receivedCode) {
 			}
 		}  
 	}
-	if (receivedCode.address == 66 && receivedCode.unit == 7 && receivedCode.switchType == 0) // Unit 66 ID 7 On signal
+	if (receivedCode.address == 66 && receivedCode.unit == 7 && receivedCode.switchType == 0) // Unit 66 ID 7 Off signal
     {
 	analogWrite(ledPinR, 0); 
 	analogWrite(ledPinG, 0);
@@ -104,7 +104,7 @@ void egg(NewRemoteCode receivedCode) {
 	delay(50);
 		}
 	}
-	if (receivedCode.address == 66 && receivedCode.unit == 7 && receivedCode.switchType == 1) // Unit 66 ID 7 Off signal
+	if (receivedCode.address == 66 && receivedCode.unit == 7 && receivedCode.switchType == 1) // Unit 66 ID 7 On signal
     {
 	analogWrite(ledPinR, 0); 
 	analogWrite(ledPinG, 0);
@@ -114,7 +114,7 @@ void egg(NewRemoteCode receivedCode) {
 	delay(50);
 		}
 	}
-	if (receivedCode.address == 66 && receivedCode.unit == 8 && receivedCode.switchType == 0) // Unit 66 ID 8 On signal
+	if (receivedCode.address == 66 && receivedCode.unit == 8 && receivedCode.switchType == 0) // Unit 66 ID 8 Off signal
 	{
   	analogWrite(ledPinR, 0); 
 	analogWrite(ledPinG, 0);
@@ -124,7 +124,7 @@ void egg(NewRemoteCode receivedCode) {
 	analogWrite(ledPinG, 51);
 	analogWrite(ledPinB, 153); 
 	}
-        if (receivedCode.address == 66 && receivedCode.unit == 8 && receivedCode.switchType == 1) // Unit 66 ID 8 Off signal
+        if (receivedCode.address == 66 && receivedCode.unit == 8 && receivedCode.switchType == 1) // Unit 66 ID 8 On signal
 	{
   	analogWrite(ledPinR, 0); 
 	analogWrite(ledPinG, 0);
@@ -132,13 +132,19 @@ void egg(NewRemoteCode receivedCode) {
 	// Glow Green
 	analogWrite(ledPinG, 255);
 	}
-	if (receivedCode.address == 66 && receivedCode.unit == 9 && receivedCode.switchType == 0) // Unit 66 ID 9 On signal
+        if (receivedCode.address == 66 && receivedCode.unit == 9 && receivedCode.switchType == 0) // Unit 66 ID 9 Off signal
 	{
-	//LED off
   	analogWrite(ledPinR, 0); 
 	analogWrite(ledPinG, 0);
 	analogWrite(ledPinB, 0);
 	}
+        if (receivedCode.address == 66 && receivedCode.unit == 9 && receivedCode.switchType == 1) // Unit 66 ID 9 On signal
+	{
+  	analogWrite(ledPinR, 0); 
+	analogWrite(ledPinG,40);
+	analogWrite(ledPinB, 0);
+	}
+
 
 //Blink routine
 }
