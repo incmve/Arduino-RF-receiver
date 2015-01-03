@@ -3,9 +3,9 @@
 * https://github.com/incmve/Arduino-RF-receiver
 *
 *
-* switchtype 1 = on
-* switchtype 2 = off
-* switchtype 3 = dim
+* switchtype 0 = on
+* switchtype 1 = off
+* switchtype 2 = dim
 * For details, see NewRemoteReceiver.h!
 *
 * This sketch receives a KAKU signal and fades an RGB LED.
@@ -15,9 +15,9 @@
 
 
 #include <NewRemoteReceiver.h>
-int ledPinR = 6;    // Red LED connected to digital pin 6
-int ledPinB = 5;    // Blue LED connected to digital pin 5
-int ledPinG = 3;    // Green LED connected to digital pin 4
+int ledPinR = 5;    // Red LED connected to digital pin 5
+int ledPinB = 9;    // Blue LED connected to digital pin 9
+int ledPinG = 6;    // Green LED connected to digital pin 6
 
 void setup() {
   Serial.begin(115200);
@@ -131,6 +131,13 @@ void egg(NewRemoteCode receivedCode) {
 	analogWrite(ledPinB, 0);
 	// Glow Green
 	analogWrite(ledPinG, 255);
+	}
+	if (receivedCode.address == 66 && receivedCode.unit == 9 && receivedCode.switchType == 0) // Unit 66 ID 9 On signal
+	{
+	//LED off
+  	analogWrite(ledPinR, 0); 
+	analogWrite(ledPinG, 0);
+	analogWrite(ledPinB, 0);
 	}
 
 //Blink routine
