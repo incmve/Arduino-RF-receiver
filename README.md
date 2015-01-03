@@ -12,6 +12,7 @@ Unit 66 ID 7 on = blink red
 Unit 66 ID 7 off = blink red/blue
 Unit 66 ID 8 on = burn pink
 unit 66 ID 8 off = burn green
+unit 66 ID 9 on = LED off
 ```
 
 ```
